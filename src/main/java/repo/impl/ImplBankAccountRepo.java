@@ -49,7 +49,7 @@ public class ImplBankAccountRepo implements IBankAccountRepo {
     @Override
     public void addToList() {
         log_history = dao.readFromFileLog();
-        userList = new ArrayList<>();
+        userList = dao.readFromFileUser();
         accountList = dao.readFromFileAccount();
         for (int i = 0; i < userList.size(); i++) {
             User user = userList.get(i);
